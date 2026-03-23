@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Prix Slots | Premium Casino</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e10600', // Ferrari Red
+                            dark: '#111111',
+                            darker: '#0a0a0a',
+                            light: '#f4f4f4',
+                            accent: '#ff2a24'
+                        }
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        racing: ['"Racing Sans One"', 'cursive']
+                    },
+                    backgroundImage: {
+                        'speed-gradient': 'linear-gradient(135deg, rgba(17,17,17,1) 0%, rgba(225,6,0,0.2) 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-outfit overflow-x-hidden selection:bg-brand-red selection:text-white relative">
+
+    <!-- Speed Lines Background Effect -->
+    <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden opacity-30 mix-blend-screen">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
+    </div>
+
+    <!-- Global Navigation -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-brand-dark/80 backdrop-blur-xl border-b border-white/5" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-racing tracking-widest uppercase flex items-center gap-2 drop-shadow-lg group">
+                <i class="fa-solid fa-flag-checkered text-brand-red group-hover:animate-pulse"></i>
+                GP <span class="text-brand-red">Casino</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold tracking-wide uppercase text-sm">
+                <a href="#games" class="hover:text-brand-red hover:skew-x-[-10deg] transition-all duration-300">Games</a>
+                <a href="#promotions" class="hover:text-brand-red hover:skew-x-[-10deg] transition-all duration-300">Promotions</a>
+                <a href="#company" class="hover:text-brand-red hover:skew-x-[-10deg] transition-all duration-300">Company</a>
+                <a href="#contact" class="hover:text-brand-red hover:skew-x-[-10deg] transition-all duration-300">Contact Us</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block px-5 py-2 hover:text-brand-red transition-colors font-bold tracking-wide uppercase text-sm">Log In</button>
+                <button class="bg-brand-red text-white px-6 py-2 rounded-sm font-racing uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-[0_0_20px_rgba(225,6,0,0.6)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all duration-300 transform skew-x-[-10deg]">
+                    <span class="inline-block transform skew-x-[10deg]">Sign Up</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (High-Octane Visuals) -->
+    <section class="relative min-h-[100vh] flex items-center pt-20 overflow-hidden" id="home">
+        <!-- Hero Background -->
+        <div class="absolute inset-0 z-0 bg-brand-darker">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-dark/60 to-transparent z-10 mix-blend-multiply"></div>
+            <!-- The hero_bg.png will be supplied via agent file copy -->
+            <img src="./assets/hero_bg.png" alt="F1 Racing Casino" class="w-full h-full object-cover object-center opacity-70 mix-blend-luminosity scale-105 animate-zoom-slow" onerror="this.src='https://images.unsplash.com/photo-1546252438-e6dabd0facf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 flex flex-col items-start mt-20 md:mt-0 glass-panel p-10 max-w-4xl border-l-[6px] border-brand-red">
+            <div class="inline-block bg-brand-red/10 border border-brand-red/50 text-brand-red px-5 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest mb-6 animate-pulse backdrop-blur-md">
+                <i class="fa-solid fa-fire mr-2"></i> Maximum Velocity Casino
+            </div>
+            <h1 class="text-6xl md:text-8xl font-racing uppercase leading-[0.9] mb-6 transform -skew-x-[6deg] tracking-tight drop-shadow-2xl">
+                Feel The <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-[#ff5050]">Rush</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-2xl max-w-2xl mb-10 font-light border-l border-white/20 pl-4 font-outfit">
+                Premium slots, high-stakes tables, and instant win scratchcards. Race to the ultimate jackpot with lightning-fast payouts and extreme volatility.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+                <button class="bg-brand-red text-white px-10 py-4 text-xl font-racing uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-lg shadow-brand-red/50 hover:shadow-white/50 transition-all duration-300 transform skew-x-[-15deg] group flex-1 sm:flex-none justify-center">
+                    <span class="inline-flex transform skew-x-[15deg] items-center gap-3">
+                        Play Now <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                    </span>
+                </button>
+                <button class="bg-black/40 backdrop-blur-md border border-white/30 text-white px-10 py-4 text-xl font-racing uppercase tracking-wider hover:border-brand-red hover:bg-brand-red/20 transition-all duration-300 transform skew-x-[-15deg] flex-1 sm:flex-none justify-center">
+                    <span class="inline-block transform skew-x-[15deg]">View Providers</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Winner Marquee (Racing / Hacksaw Style) -->
+    <div class="bg-gradient-to-r from-brand-red via-[#ff2a24] to-brand-red w-full overflow-hidden py-4 border-y border-white/10 shadow-[0_0_30px_rgba(225,6,0,0.4)] z-20 relative transform -skew-y-2 translate-y-[-50%] group cursor-default">
+        <div class="marquee-track flex whitespace-nowrap items-center font-racing text-2xl md:text-3xl uppercase tracking-widest text-white group-hover:[animation-play-state:paused]">
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-trophy text-yellow-400"></i> JohnD won $15,000 on Speed Slots</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-bolt text-yellow-400"></i> SarahM hit the GRAND JACKPOT</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-star text-yellow-400"></i> MikeR won $8,400 on Turbo Roulette</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-trophy text-yellow-400"></i> AliK won $22,100 on Grand Prix Grid</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-fighter-jet text-white"></i> Next Tournament starts in 10 mins!</span>
+            <!-- Duplicates -->
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-trophy text-yellow-400"></i> JohnD won $15,000 on Speed Slots</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-bolt text-yellow-400"></i> SarahM hit the GRAND JACKPOT</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-star text-yellow-400"></i> MikeR won $8,400 on Turbo Roulette</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-trophy text-yellow-400"></i> AliK won $22,100 on Grand Prix Grid</span>
+            <span class="mx-12 flex items-center gap-3"><i class="fa-solid fa-fighter-jet text-white"></i> Next Tournament starts in 10 mins!</span>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <section class="py-24 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] relative z-10 reveal-on-scroll" id="games">
+        <div class="absolute inset-0 bg-brand-dark/95 z-0 pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            
+            <div class="flex flex-col xl:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-racing uppercase tracking-wide transform -skew-x-[6deg] drop-shadow-md">
+                        Pole <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-orange-500">Position</span> Games
+                    </h2>
+                    <p class="text-gray-400 mt-4 text-xl border-l-2 border-brand-red pl-3">The most thrilling and high-volatility games in the market. (Hacksaw & Jili Style)</p>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2 md:gap-4 font-racing uppercase tracking-wider text-base md:text-lg w-full xl:w-auto">
+                    <button class="px-8 py-3 bg-brand-red text-white skew-x-[-10deg] shadow-[0_0_15px_rgba(225,6,0,0.6)] transform hover:scale-105 transition-all"><span class="block skew-x-[10deg]">All Games</span></button>
+                    <button class="px-8 py-3 bg-brand-darker border border-white/10 text-gray-400 hover:text-white hover:border-brand-red skew-x-[-10deg] hover:bg-brand-red/10 transition-all"><span class="block skew-x-[10deg]">Slots</span></button>
+                    <button class="px-8 py-3 bg-brand-darker border border-white/10 text-gray-400 hover:text-white hover:border-brand-red skew-x-[-10deg] hover:bg-brand-red/10 transition-all"><span class="block skew-x-[10deg]">Instant Win</span></button>
+                    <button class="px-8 py-3 bg-brand-darker border border-white/10 text-gray-400 hover:text-white hover:border-brand-red skew-x-[-10deg] hover:bg-brand-red/10 transition-all"><span class="block skew-x-[10deg]">Fishing</span></button>
+                </div>
+            </div>
+
+            <!-- Premium Game Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Game Card 1 -->
+                <div class="game-card group cursor-pointer relative overflow-hidden rounded-lg bg-brand-darker border border-white/10 hover:border-brand-accent transition-all duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(225,6,0,0.5)] transform hover:-translate-y-2">
+                    <!-- Red Neon Top Accent -->
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity z-30"></div>
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                    <div class="relative pt-[130%] overflow-hidden">
+                        <!-- Custom Image -->
+                        <img src="./assets/game1.png" alt="Speed King" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out game-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    
+                    <!-- Content Overlay -->
+                    <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 flex flex-col justify-center items-center gap-6 p-6 translate-y-8 group-hover:translate-y-0">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-racing text-white uppercase tracking-wide drop-shadow-lg mb-1">Speed King</h3>
+                            <p class="text-brand-red font-bold text-sm tracking-[0.2em] uppercase">Slots</p>
+                        </div>
+                        <button class="bg-brand-red text-white w-full py-3 rounded-sm font-racing text-lg uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-[0_0_15px_rgba(225,6,0,0.8)] transition-all transform skew-x-[-10deg]">
+                            <span class="block skew-x-[10deg]">Play Demo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card group cursor-pointer relative overflow-hidden rounded-lg bg-brand-darker border border-white/10 hover:border-brand-accent transition-all duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(225,6,0,0.5)] transform hover:-translate-y-2">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity z-30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                    <div class="relative pt-[130%] overflow-hidden">
+                        <img src="./assets/game2.png" alt="Neon Track" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale group-hover:grayscale-0 game-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1615151536762-b9cf6d3fdcc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 flex flex-col justify-center items-center gap-6 p-6 translate-y-8 group-hover:translate-y-0">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-racing text-white uppercase tracking-wide drop-shadow-lg mb-1 leading-none">Neon Track<br><span class="text-xl text-gray-300">Scratch</span></h3>
+                            <p class="text-brand-red font-bold text-sm tracking-[0.2em] uppercase mt-2">Instant Win</p>
+                        </div>
+                        <button class="bg-brand-red text-white w-full py-3 rounded-sm font-racing text-lg uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-[0_0_15px_rgba(225,6,0,0.8)] transition-all transform skew-x-[-10deg]">
+                            <span class="block skew-x-[10deg]">Play Demo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card group cursor-pointer relative overflow-hidden rounded-lg bg-brand-darker border border-white/10 hover:border-brand-accent transition-all duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(225,6,0,0.5)] transform hover:-translate-y-2">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity z-30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                    <div class="relative pt-[130%] overflow-hidden">
+                        <img src="./assets/game3.png" alt="Turbo Roulette" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out game-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1606167195514-46c59239d226?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 flex flex-col justify-center items-center gap-6 p-6 translate-y-8 group-hover:translate-y-0">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-racing text-white uppercase tracking-wide drop-shadow-lg mb-1 leading-tight">Turbo<br>Roulette</h3>
+                            <p class="text-brand-red font-bold text-sm tracking-[0.2em] uppercase mt-2">Table Game</p>
+                        </div>
+                        <button class="bg-brand-red text-white w-full py-3 rounded-sm font-racing text-lg uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-[0_0_15px_rgba(225,6,0,0.8)] transition-all transform skew-x-[-10deg]">
+                            <span class="block skew-x-[10deg]">Play Demo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="game-card group cursor-pointer relative overflow-hidden rounded-lg bg-brand-darker border border-white/10 hover:border-brand-accent transition-all duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(225,6,0,0.5)] transform hover:-translate-y-2">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity z-30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+                    <div class="relative pt-[130%] overflow-hidden">
+                        <img src="./assets/game4.png" alt="Drift Kings" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale group-hover:grayscale-0 game-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1587394142646-77881c1c911b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 flex flex-col justify-center items-center gap-6 p-6 translate-y-8 group-hover:translate-y-0">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-racing text-white uppercase tracking-wide drop-shadow-lg mb-1 leading-tight">Drift Kings</h3>
+                            <p class="text-brand-red font-bold text-sm tracking-[0.2em] uppercase mt-2">Slots</p>
+                        </div>
+                        <button class="bg-brand-red text-white w-full py-3 rounded-sm font-racing text-lg uppercase tracking-wider hover:bg-white hover:text-brand-red shadow-[0_0_15px_rgba(225,6,0,0.8)] transition-all transform skew-x-[-10deg]">
+                            <span class="block skew-x-[10deg]">Play Demo</span>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="flex justify-center mt-16">
+                <button class="bg-transparent border-2 border-brand-red text-brand-red px-12 py-4 text-xl font-racing uppercase tracking-widest hover:bg-brand-red hover:text-white shadow-[0_0_20px_rgba(225,6,0,0.2)] hover:shadow-[0_0_30px_rgba(225,6,0,0.8)] transition-all duration-300 transform skew-x-[-10deg] hover:-translate-y-1">
+                    <span class="inline-block transform skew-x-[10deg]"><i class="fa-solid fa-spinner hover:animate-spin mr-2"></i> Load More Games</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darker border-t-[3px] border-brand-red pt-24 pb-12 relative overflow-hidden" id="contact">
+        <!-- Giant background text -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-racing text-white/[0.01] whitespace-nowrap pointer-events-none select-none z-0">
+            GRAND PRIX CASINO
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-4xl font-racing text-white tracking-widest uppercase flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-flag-checkered text-brand-red"></i>
+                        GP <span class="text-brand-red">Casino</span>
+                    </a>
+                    <p class="text-gray-400 text-lg max-w-md mb-8 leading-relaxed">
+                        Experience the raw thrill of high-speed gaming. Premium slots, massive jackpots, and instant payouts. Join the elite racing club today and ignite your winning streak.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-sm bg-brand-dark flex items-center justify-center hover:bg-brand-red hover:text-white hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(225,6,0,0.6)] transition-all text-gray-400 text-xl border border-white/10">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-sm bg-brand-dark flex items-center justify-center hover:bg-brand-red hover:text-white hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(225,6,0,0.6)] transition-all text-gray-400 text-xl border border-white/10">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-sm bg-brand-dark flex items-center justify-center hover:bg-brand-red hover:text-white hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(225,6,0,0.6)] transition-all text-gray-400 text-xl border border-white/10">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-racing text-2xl uppercase tracking-wider mb-8 text-white relative inline-block">
+                        Casino
+                        <div class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-red"></div>
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 font-medium">
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> All Games</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Slots</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Table Games</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Promotions</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> VIP Club</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-racing text-2xl uppercase tracking-wider mb-8 text-white relative inline-block">
+                        Support
+                        <div class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-red"></div>
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 font-medium">
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Help Center</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Live Chat <span class="bg-brand-red text-white text-[10px] px-2 py-0.5 ml-2 font-bold uppercase rounded-sm">24/7</span></a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-brand-red"></i> Responsible Gaming</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-gray-500 text-sm">© 2026 Grand Prix Casino. Designed for speed. All rights reserved.</p>
+                <div class="flex gap-4 opacity-50 text-3xl">
+                    <i class="fa-brands fa-cc-visa hover:text-white cursor-pointer transition-colors"></i>
+                    <i class="fa-brands fa-cc-mastercard hover:text-white cursor-pointer transition-colors"></i>
+                    <i class="fa-brands fa-bitcoin hover:text-white cursor-pointer transition-colors"></i>
+                    <i class="fa-brands fa-ethereum hover:text-white cursor-pointer transition-colors"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Navbar Scrolled State
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-[0_10px_30px_rgba(0,0,0,0.8)]', 'py-2');
+                navbar.classList.remove('py-4', 'border-white/5');
+                navbar.classList.replace('bg-brand-dark/80', 'bg-brand-dark/95');
+            } else {
+                navbar.classList.remove('shadow-[0_10px_30px_rgba(0,0,0,0.8)]', 'py-2');
+                navbar.classList.add('py-4', 'border-white/5');
+                navbar.classList.replace('bg-brand-dark/95', 'bg-brand-dark/80');
+            }
+            
+            // Scroll Reveal Animation elements
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].style.opacity = '1';
+                    reveals[i].style.transform = 'translateY(0)';
+                }
+            }
+        });
+
+        // Setup reveal elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+            reveals.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                el.style.transition = 'all 0.8s ease-out';
+            });
+            // Initial check
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>

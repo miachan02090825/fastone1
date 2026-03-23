@@ -1,0 +1,75 @@
+/* Extra Custom Rules NOT Supported by Tailwind CDN Out-of-the-Box */
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+/* Base Body Styles */
+body {
+    background-color: #0a0a0a;
+}
+
+/* Glass panel for high-quality blur effect */
+.glass-panel {
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* -------------- Animations -------------- */
+
+/* Speed Lines Animation */
+.line {
+    position: absolute;
+    width: 2px;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent, rgba(225, 6, 0, 0.8), transparent);
+    animation: speed-lines 3s linear infinite;
+}
+
+/* Stagger speed lines for depth */
+.line-1 { left: 15%; animation-delay: 0s; }
+.line-2 { left: 45%; animation-delay: 1.2s; height: 150vh; opacity: 0.5; width: 4px; }
+.line-3 { left: 65%; animation-delay: 0.5s; width: 3px; }
+.line-4 { left: 88%; animation-delay: 2.1s; height: 120vh; opacity: 0.6; }
+
+@keyframes speed-lines {
+    0% {
+        transform: translateY(-100vh) skewX(-20deg);
+    }
+    100% {
+        transform: translateY(100vh) skewX(-20deg);
+    }
+}
+
+/* Dynamic Endless Marquee */
+.marquee-track {
+    animation: marquee 30s linear infinite;
+    /* Hardware acceleration */
+    transform: translateZ(0); 
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* Slow Hero Image Zoom */
+@keyframes zoom-slow {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
+}
+.animate-zoom-slow {
+    animation: zoom-slow 20s ease-in-out infinite alternate;
+}
+
+/* Extra hover state for Game Cards (Safeguard filter overrides) */
+.game-card:hover .game-thumbnail {
+    filter: grayscale(0) contrast(1.15) saturate(1.3) !important;
+}
